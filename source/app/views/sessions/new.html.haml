@@ -1,0 +1,5 @@
+.container
+  =form_for :session, url: { controller: "sessions", action: "create"} do |f|
+    = f.label :email
+    = f.text_field :email
+    = f.submit "Login"
