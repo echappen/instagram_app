@@ -27,9 +27,11 @@ photo_links = [
 
 me = User.create(name: "Eleni Chappen", email: "elenichappen@gmail.com")
 
+marfa = Album.create( user_id: 1, name: "Trip to Marfa", description: "Our road trip to Marfa, Texas in December 2014")
+
 photo_links.each do |link|
-  Photo.create(user_id: 1, photo_url: link[0], instagram_url: link[1], selected: 0)
+  p = Photo.create(user_id: 1, photo_url: link[0], instagram_url: link[1], selected: 0)
+  PhotoAlbum.create(photo_id: p.id, album_id: marfa.id)
 end
 
-Album.create( user_id: 1, name: "Trip to Marfa", description: "Our road trip to Marfa, Texas in December 2014")
 
