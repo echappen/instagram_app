@@ -2,17 +2,17 @@
   %p.navbar-right
     - if session[:user_id]
       = link_to "log out", session_path(session[:user_id]), method: :delete if session[:user_id]
+      %p.navbar-left
+        pretty instagram
+      %p.navbar-right
+        profile
+      %p.navbar-right
+        about
+      %p.navbar-right#add_photo_trigger
+        add photos
+      .clear-fix
+      .add_photos
+        .done
+          done
     - else
       = link_to "log in", new_session_path
-  %p.navbar-left
-    pretty instagram
-  %p.navbar-right
-    profile
-  %p.navbar-right
-    about
-  %p.navbar-right#add_photo_trigger
-    add photos
-  .clear-fix
-  .add_photos
-    .done
-      done
