@@ -1,7 +1,10 @@
-.container.log-in
-  =form_for :session, url: { controller: "sessions", action: "create"} do |f|
-    = f.label :email
-    = f.text_field :email
-    = f.label :password
-    = f.password_field :password
-    = f.submit "Login"
+.container
+  .log-in
+    %h1
+      Log-In
+    =form_for :session, url: { controller: "sessions", action: "create"} do |f|
+      = f.label :email
+      = f.text_field :email
+      = f.label :password
+      = f.password_field :password
+      = f.submit "Login"
