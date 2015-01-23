@@ -1,5 +1,7 @@
 .container
   - @albums.each do |album|
     .album_box
-      = album.name
-      = image_tag("#{album.photos.first.photo_url}")
+      %p
+        = album.name
+      - album.photos.each do |photo|
+        = image_tag("#{photo.photo_url}")
