@@ -55,7 +55,7 @@ $base-border-color: $light-green;
 $base-border: 1px solid $base-border-color;
 
 // Forms
-$form-border-color: $base-border-color;
+$form-border-color: $light-gray;
 $form-border-color-hover: darken($base-border-color, 10);
 $form-border-color-focus: $base-accent-color;
 $form-border-radius: $base-border-radius;
