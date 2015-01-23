@@ -1,6 +1,6 @@
 .navbar
-  %p.navbar-right
-    - if session[:user_id]
+  - if session[:user_id]
+    %p.navbar-right
       = link_to "log out", session_path(session[:user_id]), method: :delete if session[:user_id]
       %p.navbar-left
         pretty instagram
@@ -14,6 +14,8 @@
       .add_photos
         .done
           done
-    - else
-      %p.navbar-right
-        about
+  - else
+    %p.navbar-left
+      pretty instagram
+    %p.navbar-right.borderless
+      about
