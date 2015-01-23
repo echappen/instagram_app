@@ -3,11 +3,11 @@
     %p.navbar-right
       = link_to "log out", session_path(session[:user_id]), method: :delete if session[:user_id]
       %p.navbar-left
-        pretty instagram
+        = link_to "pretty instagram", root_path
       %p.navbar-right
         profile
       %p.navbar-right
-        about
+        = link_to "about", about_path
       %p.navbar-right#add_photo_trigger
         add photos
       .clear-fix.hidden
@@ -16,6 +16,6 @@
           done
   - else
     %p.navbar-left
-      pretty instagram
+      = link_to "pretty instagram", root_path
     %p.navbar-right.borderless
-      about
+      = link_to "about", about_path
