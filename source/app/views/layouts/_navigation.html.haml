@@ -10,9 +10,10 @@
         about
       %p.navbar-right#add_photo_trigger
         add photos
-      .clear-fix
+      .clear-fix.hidden
       .add_photos
         .done
           done
     - else
-      = link_to "log in", new_session_path
+      %p.navbar-right
+        about
