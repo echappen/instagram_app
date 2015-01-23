@@ -34,7 +34,7 @@ photos_4 = [
   ]
 ]
 
-me = User.create(name: "Eleni Chappen", email: "elenichappen@gmail.com")
+me = User.create(name: "Eleni Chappen", email: "elenichappen@gmail.com", password: "password")
 
 marfa = Album.create( user_id: 1, name: "Trip to Marfa", description: "Our road trip to Marfa, Texas in December 2014")
 
