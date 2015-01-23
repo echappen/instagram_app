@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml', '~> 4.0.6'
 gem 'sass'
 gem 'bourbon'
+gem 'bitters'
 gem 'neat'
 gem 'jquery-ui-rails', '~> 5.0.3'
 
