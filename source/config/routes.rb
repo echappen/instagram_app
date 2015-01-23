@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   get '/albums', to: redirect('/')
 
+  get '/about', :to => "pages#about"
+
 end
