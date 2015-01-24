@@ -5,7 +5,7 @@
       %p.navbar-left
         = link_to "pretty instagram", root_path
       %p.navbar-right
-        profile
+        = link_to "profile", "/users/#{current_user.id}"
       %p.navbar-right
         = link_to "about", about_path
       %p.navbar-right#add_photo_trigger
