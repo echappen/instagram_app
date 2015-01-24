@@ -6,8 +6,9 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
-  get '/albums', to: redirect('/')
 
+  get '/albums', to: redirect('/')
   get '/about', :to => "pages#about"
+  get '/users/:user_id', :to => "users#show"
 
 end
