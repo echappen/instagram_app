@@ -1,19 +1,19 @@
 .navbar
+  .navbar-left
+    = link_to "pretty instagram", root_path
   - if session[:user_id]
-    %p.navbar-right
+    .navbar-right
       = link_to "log out", session_path(session[:user_id]), method: :delete if session[:user_id]
-      %p.navbar-left
-        = link_to "pretty instagram", root_path
-      %p.navbar-right
-        = link_to "profile", "/users/#{current_user.id}"
-      %p.navbar-right
-        = link_to "about", about_path
-      %p.navbar-right#add_photo_trigger
-        add photos
-      .clear-fix.hidden
-      .add_photos
-        .done
-          done
+    .navbar-right
+      = link_to "profile", "/users/#{current_user.id}"
+    .navbar-right
+      = link_to "about", about_path
+    .navbar-right#add_photo_trigger
+      add photos
+    .clear-fix
+    .add_photos
+      .done
+        done
   - else
     %p.navbar-left
       = link_to "pretty instagram", root_path
