@@ -1,17 +1,14 @@
-$(function() {
+$(document).ready(function() {
 
-  var photo_box = $(".add_photos");
-  var link = $("#add_photo_trigger");
-
-  photo_box.hide();
-
-  link.click(function() {
-    photo_box.slideDown();
+  $(".add_photos").hide();
+  $(document).on('click','#add_photo_trigger', function(event) {
+    event.preventDefault();
+    console.log('happened');
+    $(".add_photos").slideDown("slow");
   });
 
-
-  $(".done").click(function() {
-    photo_box.slideUp();
+  $(document).on('click','.done', function(event) {
+    event.preventDefault();
+    $(".add_photos").slideUp("slow");
   });
-
 });
